@@ -1,0 +1,4 @@
+interface:
+  display_name: "account-content-workflow"
+  short_description: "贯通账号策划、选题评分、可拍脚本与审核复审，保留真实材料和确认进度"
+  default_prompt: "使用 $account-content-workflow，沿用我提供的账号资料和已确认要求，完成本轮内容任务，关键缺口先确认。"
