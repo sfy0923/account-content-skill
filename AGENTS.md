@@ -2,7 +2,7 @@
 
 This repository distributes one portable account content workflow Skill.
 
-- Treat `skills/account-content-workflow/` as the source of truth; preserve its relative references and all resources.
+- Treat `skills/ggb/` as the source of truth; preserve its relative references and all resources.
 - Keep shared routing and invariant decisions in `SKILL.md`; put stage-specific detail in the corresponding reference.
 - Preserve the seven scoring weights, the 90-point threshold, semantic deduplication, fact boundaries and genuine confirmation state unless the user explicitly changes them.
 - Keep client-specific business facts and matrix settings in project records, not in universal Skill defaults.

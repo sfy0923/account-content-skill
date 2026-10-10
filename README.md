@@ -1,37 +1,39 @@
-# 账号内容工作 Skill
+# GGB · 账号内容工作 Skill
 
 把真实人物、业务和用户问题，推进为有依据、能讲清、能拍出的账号内容。一个入口按需处理内容策划、定位访谈、选题评分、脚本和审核复审，适用于不同行业的企业账号、个人 IP 与员工矩阵。
 
-Skill 名称：`account-content-workflow`。当前版本：`0.1.0`。
+显示名称：**GGB**。调用标识：`ggb`。当前版本：`0.1.1`。
 
 ## 安装
 
 用支持 Agent Skills 的安装器选择自己的 Agent：
 
 ```bash
-npx -y skills add sfy0923/account-content-skill --skill account-content-workflow -g
+npx -y skills add sfy0923/account-content-skill --skill ggb -g
 ```
 
 安装到 Codex：
 
 ```bash
-npx -y skills add sfy0923/account-content-skill --skill account-content-workflow -g -a codex -y
+npx -y skills add sfy0923/account-content-skill --skill ggb -g -a codex -y
 ```
 
 安装到 Claude Code：
 
 ```bash
-npx -y skills add sfy0923/account-content-skill --skill account-content-workflow -g -a claude-code -y
+npx -y skills add sfy0923/account-content-skill --skill ggb -g -a claude-code -y
 ```
 
-也可以将 `skills/account-content-workflow/` 完整放入自己 Agent 支持的 Skill 目录；入口和按需引用文件应一起保留。安装器参数见 [skills 官方说明](https://github.com/vercel-labs/skills/blob/main/README.md)，目录格式见 [Agent Skills 规范](https://agentskills.io/specification)。
+此前安装过`account-content-workflow`的使用者，应按上面的新命令安装`ggb`，确认可用后移除旧入口，避免重复发现。显示名使用GGB；目录与调用标识按Skill格式使用小写ggb。仓库地址保持不变。
+
+也可以将 `skills/ggb/` 完整放入自己 Agent 支持的 Skill 目录；入口和按需引用文件应一起保留。安装器参数见 [skills 官方说明](https://github.com/vercel-labs/skills/blob/main/README.md)，目录格式见 [Agent Skills 规范](https://agentskills.io/specification)。
 
 ## 怎么用
 
-从当前需要的阶段开始，已有账号资料和确认结果不必重填。支持 `$account-content-workflow` 调用的 Agent 可直接使用：
+从当前需要的阶段开始，已有账号资料和确认结果不必重填。支持 `$ggb` 调用的 Agent 可直接使用：
 
 ```text
-使用 $account-content-workflow。
+使用 $ggb。
 本轮只做选题：根据我提供的账号资料，给3条解决方案型选题。
 保留七项评分、依据、语义去重和可拍状态；不够90分如实说明。
 行业与实际业务：……
@@ -59,7 +61,7 @@ npx -y skills add sfy0923/account-content-skill --skill account-content-workflow
 可选评分计算器使用 Python 3，无第三方包：
 
 ```bash
-python3 skills/account-content-workflow/scripts/score_topic.py 5 4 5 5 5 4 5 --dedup independent --other-gates passed
+python3 skills/ggb/scripts/score_topic.py 5 4 5 5 5 4 5 --dedup independent --other-gates passed
 ```
 
 它只负责算分，不能替代事实、语义去重或授权判断。未指定完成状态时不会自动入选。分数不预测播放、过审、咨询或成交。
