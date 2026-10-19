@@ -1,0 +1,4 @@
+interface:
+  display_name: "IP泛话题"
+  short_description: "跨行业泛话题选题、自然口播、拍摄执行与审核复审，承接GGB确认进度"
+  default_prompt: "使用 $ip-general-topics 沿用已有IP资料和确认进度，完成本轮泛话题选题、方案、写稿或审核。"

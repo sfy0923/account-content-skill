@@ -1,10 +1,11 @@
 # Repository guidance
 
-This repository distributes one portable account content workflow Skill.
+This repository distributes the portable GGB workflow and its independently installable IP general-topics Skill.
 
-- Treat `skills/ggb/` as the source of truth; preserve its relative references and all resources.
+- Treat `skills/ggb/` and `skills/ip-general-topics/` as the distribution sources; preserve their relative references and all resources. Synchronize and compare any separate authoring source before publishing.
 - Keep shared routing and invariant decisions in `SKILL.md`; put stage-specific detail in the corresponding reference.
 - Preserve the seven scoring weights, the 90-point threshold, semantic deduplication, fact boundaries and genuine confirmation state unless the user explicitly changes them.
+- Research-stage potential and readiness scores belong to references/research.md; they do not replace or convert into the formal seven-item score. Keep the stage and missing-data state visible.
 - Keep client-specific business facts and matrix settings in project records, not in universal Skill defaults.
 - Do not publish original client materials, local paths, credentials, private evaluation answers or execution logs.
 - Test observable behavior. Distinguish structural validation, synthetic tests, real project acceptance, independent review and GitHub installation checks.

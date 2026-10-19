@@ -1,6 +1,6 @@
 # 维护与同步
 
-仓库中的 `skills/ggb/` 是分发真源。安装目录是使用副本；不要只改安装副本，造成下一次安装丢失修改。
+仓库中的 `skills/ggb/` 与 `skills/ip-general-topics/` 是两个Skill的分发目录。安装目录是使用副本；不要只改安装副本，造成下一次安装丢失修改。本地制作工程维护独立真源时，发布前将其完整资源同步到对应分发目录，并逐文件核对；两份内容不得各自漂移。
 
 显示名为GGB，规范调用标识与目录为`ggb`。从旧标识`account-content-workflow`迁移时，先安装新入口并核对，再移除自己的旧派生入口；不要删除用户的项目记录或其他来源的Skill。
 
@@ -19,7 +19,7 @@
 使用者更新安装副本可运行：
 
 ```bash
-npx -y skills update ggb
+npx -y skills update ggb ip-general-topics -g
 ```
 
 若当前安装器无法更新该来源，按 README 安装命令重新安装，并保留自己的项目记录。仓库变更不会自动改变所有同事的已安装副本；更新后让 Agent 重新加载 Skill。
